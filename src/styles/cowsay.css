@@ -1,0 +1,20 @@
+.cowsay-content {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+}
+.cowsay-content .cowsay-content-body {
+  margin-top: 5rem;
+  height: 20vh;
+}
+.cowsay-content .cowsay-content-body textarea {
+  max-width: 750px;
+  background: none;
+  color: white;
+  resize: none;
+  cursor: default;
+}
+.cowsay-content button {
+  position: absolute;
+  height: 25px;
+}/*# sourceMappingURL=cowsay.css.map */

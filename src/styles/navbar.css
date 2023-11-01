@@ -1,0 +1,33 @@
+.navbar {
+  background-color: rgba(40, 38, 38, 0.973);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.navbar h1 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: rgb(62, 213, 112);
+}
+.navbar button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  all: unset;
+}
+.navbar button .icon {
+  color: white;
+  font-size: x-large;
+}
+.navbar button .icon:hover {
+  color: rgba(255, 255, 255, 0.801);
+}
+.navbar button .icon:active {
+  scale: 1.1;
+  color: rgba(255, 255, 255, 0.545);
+}
+.navbar button:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=navbar.css.map */
