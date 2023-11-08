@@ -1,53 +1,40 @@
 import "../styles/cowsay.css";
-import { useState } from "react";
-import { cowsay } from "cowsayjs";
-import cows from "../assets/cows.txt";
+import getFortune from "../functions/apifetch";
+import React, { useState, useEffect } from "react";
+
 function Cowsay() {
-  const [selectedCow, setSelectedCow] = useState("");
+  const [fortune, setFortune] = useState("");
 
-  const textArea = document.getElementById("cowsay");
-  textArea.onselect = (event) => {
+  useEffect(() => {
+    const textArea = document.getElementById("textArea");
+    if (textArea) {
+      const lines = fortune.split("\n");
+      const maxWidth = Math.max(...lines.map((line) => line.length));
+      const width = maxWidth * 8;
+      const height = lines.length * 16;
+
+      textArea.style.width = `${width}px`;
+      textArea.style.height = `${height}px`;
+    }
+  }, [fortune]);
+
+  const handleClick = async (event) => {
     event.preventDefault();
+    const text = await getFortune();
+    setFortune(text);
   };
-
-  const generateCowsay = () => {
-    fetch(cows)
-      .then((cow) => cow.text())
-      .then((text) => {
-        const textArea = document.getElementById("cowsay");
-        const cowArray = text.split("\n");
-        const randomNumber = Math.floor(Math.random() * cowArray.length);
-        setSelectedCow(cowArray[randomNumber]);
-        const cowText = cowsay(
-          "joes sgdfggdfgdfgdfg dfd  asasdsasdasdsada binssgus",
-          { cow: selectedCow }
-        );
-        textArea.value = cowText;
-        textArea.style.height = "auto";
-        textArea.style.height = `${textArea.scrollHeight}px`;
-
-        const lines = cowText.split("\n");
-        const maxLength = Math.max(...lines.map((line) => line.length));
-        const charWidth = 10; // Approximate width of a character in pixels for a monospace font
-        textArea.style.width = `${maxLength * charWidth}px`;
-      });
-  };
-
-  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-
-  svg.innerHTML = cowsay(
-    "joes sgdfggdfgdfgdfg dfd  asasdsasdasdsada binssgus",
-    { cow: selectedCow }
-  );
-
-  document.body.appendChild(svg);
 
   return (
     <div className="cowsay-content">
+      <button onClick={(e) => handleClick(e)}>click me for message!</button>
+
       <div className="cowsay-content-body">
-        <textarea id="cowsay" readOnly="readonly"></textarea>
+        {fortune ? (
+          <textarea id="textArea" value={fortune} readOnly />
+        ) : (
+          <h5 style={{ color: "lightgrey" }}>Please generate a fortune</h5>
+        )}
       </div>
-      <button onClick={generateCowsay}>Generate</button>
     </div>
   );
 }

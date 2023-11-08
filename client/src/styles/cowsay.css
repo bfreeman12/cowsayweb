@@ -4,7 +4,7 @@
 }
 .cowsay-content .cowsay-content-body {
   margin-top: 5rem;
-  height: 20vh;
+  height: 40vh;
 }
 .cowsay-content .cowsay-content-body textarea {
   background: none;
@@ -15,10 +15,10 @@
   border: 0;
   outline: none;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 .cowsay-content button {
   position: absolute;
   height: 25px;
-}/*# sourceMappingURL=cowsay.css.map */
+} /*# sourceMappingURL=cowsay.css.map */

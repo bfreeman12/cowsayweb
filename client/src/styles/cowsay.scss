@@ -1,12 +1,12 @@
 .cowsay-content {
   display: flex;
   justify-content: center;
+  min-width: 10vw;
   .cowsay-content-body {
-    margin-top: 5rem;
     height: 20vh;
+
     textarea {
       background: none;
-      color: white;
       resize: none;
       cursor: default;
       padding: 0;

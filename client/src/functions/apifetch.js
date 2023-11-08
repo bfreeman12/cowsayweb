@@ -1,10 +1,12 @@
+import axios from "axios";
+
 const getFortune = async () => {
   try {
-    const response = await fetch("https://example.com/fortune");
-    const data = await response.json();
+    const response = await axios.get("http://192.168.178.125:3000/fortune");
+    const data = response.data.message;
     return data;
   } catch (error) {
-    console.error(error);
+    console.error("error fetching fortune: ", error);
   }
 };
 
