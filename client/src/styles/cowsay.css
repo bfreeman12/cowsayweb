@@ -1,0 +1,24 @@
+.cowsay-content {
+  display: flex;
+  justify-content: center;
+}
+.cowsay-content .cowsay-content-body {
+  margin-top: 5rem;
+  height: 20vh;
+}
+.cowsay-content .cowsay-content-body textarea {
+  background: none;
+  color: white;
+  resize: none;
+  cursor: default;
+  padding: 0;
+  border: 0;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.cowsay-content button {
+  position: absolute;
+  height: 25px;
+}/*# sourceMappingURL=cowsay.css.map */
