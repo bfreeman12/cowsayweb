@@ -6,6 +6,15 @@ function Cowsay() {
   const [fortune, setFortune] = useState("");
 
   useEffect(() => {
+    const generateFortune = async () => {
+      const text = await getFortune();
+      setFortune(text);
+    };
+
+    generateFortune();
+  }, []);
+
+  useEffect(() => {
     const textArea = document.getElementById("textArea");
     if (textArea) {
       const lines = fortune.split("\n");

@@ -10,6 +10,8 @@ function Navbar() {
   return (
     <div className="navbar">
       <h1>Cowsay Web</h1>
+      {/* TODO: implement fortune upload request */}
+
       <button>
         <FontAwesomeIcon
           icon={faGear}
