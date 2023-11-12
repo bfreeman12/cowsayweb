@@ -2,6 +2,7 @@ const express = require("express");
 const cowsayjs = require("cowsayjs");
 const cors = require("cors");
 const sqlite3 = require("sqlite3").verbose();
+const db = require("./database");
 const app = express();
 require("dotenv").config();
 
@@ -13,13 +14,6 @@ app.use(
     origin: `http://${ip_address}:${client_port}`,
   })
 );
-
-const db = new sqlite3.Database("./fortune.db", (err) => {
-  if (err) {
-    console.error(err.message);
-  }
-  console.log("Connected to the fortune database.");
-});
 
 app.get("/fortune", async (req, res) => {
   try {
