@@ -1,11 +1,13 @@
 const sqlite3 = require("sqlite3").verbose();
 
-// Connect to the SQLite database
-let db = new sqlite3.Database("./fortune.db", (err) => {
-  if (err) {
-    console.error(err.message);
-  }
-  console.log("Connected to the fortune database.");
-});
+const DBSOURCE = "/tmp/server/fortune.db";
 
+const db = new sqlite3.Database(DBSOURCE, (err) => {
+  if (err) {
+    console.log(err.message);
+    throw err;
+  } else {
+    console.log("Connected to database");
+  }
+});
 module.exports = db;
