@@ -11,7 +11,7 @@ const client_port = process.env.CLIENT_PORT;
 
 app.use(
   cors({
-    origin: `https://${ip_address}:${client_port}`,
+    origin: `http://${ip_address}:${client_port}`,
   })
 );
 
