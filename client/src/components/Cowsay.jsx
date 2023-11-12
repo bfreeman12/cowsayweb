@@ -35,7 +35,7 @@ function Cowsay() {
 
   return (
     <div className="cowsay-content">
-      <button onClick={(e) => handleClick(e)}>click me for message!</button>
+      <button onClick={(e) => handleClick(e)}>generate new fortune</button>
 
       <div className="cowsay-content-body">
         {fortune ? (
