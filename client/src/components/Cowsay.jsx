@@ -36,7 +36,6 @@ function Cowsay() {
   return (
     <div className="cowsay-content">
       <button onClick={(e) => handleClick(e)}>generate new fortune</button>
-
       <div className="cowsay-content-body">
         {fortune ? (
           <textarea id="textArea" value={fortune} readOnly />

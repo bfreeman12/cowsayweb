@@ -1,10 +1,15 @@
 import "../styles/navbar.css";
 import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Settings from "./Settings";
+import { useState } from "react";
 
 function Navbar() {
+  const [settingsOpen, setSettingsOpen] = useState(false);
+
   const handleClick = (e) => {
-    alert("This feature is not yet implemented");
+    e.preventDefault();
+    setSettingsOpen(!settingsOpen);
   };
 
   return (
@@ -19,6 +24,7 @@ function Navbar() {
           className="icon"
         />
       </button>
+      {settingsOpen && <Settings />}
     </div>
   );
 }

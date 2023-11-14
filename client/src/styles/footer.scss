@@ -1,0 +1,35 @@
+.footer {
+  position: sticky;
+  top: 200%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  user-select: none;
+  a {
+    padding: 2px 6px;
+    border-bottom: 1.2px solid rgba(0, 0, 0, 0.321);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .link:hover {
+    cursor: pointer;
+    background-color: rgb(89, 89, 89);
+  }
+  .link:active {
+    background-color: rgba(74, 74, 74, 0.353);
+  }
+  .kofi-image {
+    padding-top: 0.5rem;
+    background: none;
+    border: none;
+  }
+  .kofi-image:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .kofi-image:active {
+    cursor: pointer;
+    transform: scale(1);
+  }
+}

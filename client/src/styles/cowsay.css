@@ -1,24 +1,31 @@
 .cowsay-content {
   display: flex;
   justify-content: center;
+  min-width: 10vw;
 }
 .cowsay-content .cowsay-content-body {
-  margin-top: 5rem;
-  height: 40vh;
+  padding-top: 5rem;
+  height: 20vh;
 }
 .cowsay-content .cowsay-content-body textarea {
   background: none;
-  color: white;
   resize: none;
   cursor: default;
   padding: 0;
   border: 0;
   outline: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .cowsay-content button {
+  outline: none;
+  border: 1px solid;
+  border-radius: 2px;
   position: absolute;
   height: 25px;
-} /*# sourceMappingURL=cowsay.css.map */
+  cursor: pointer;
+}
+.cowsay-content button:active {
+  background-color: rgba(179, 179, 179, 0.733);
+}/*# sourceMappingURL=cowsay.css.map */
