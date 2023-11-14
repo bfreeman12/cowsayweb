@@ -8,6 +8,7 @@
   height: 20vh;
 }
 .cowsay-content .cowsay-content-body textarea {
+  color: white;
   background: none;
   resize: none;
   cursor: default;
