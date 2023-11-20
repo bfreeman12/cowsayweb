@@ -6,7 +6,7 @@ const Settings = () => {
   return (
     <div className="settings">
       <div className="settings-container">
-        <Link to="/request-fortune" className="link">
+        <Link draggable="false" to="/request-fortune" className="link">
           Request Fortune
         </Link>
       </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/Contact.css";
 
 const ContactUs = () => {
   const [name, setName] = useState("");
@@ -7,42 +8,48 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
-    // Here you would typically send the data to your server or an API
+    if (name && email && message) {
+      console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+      alert("This feature is currently under construction");
+    }
   };
 
   return (
-    <div>
-      <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Message:
-          <textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          />
-        </label>
-        <input type="submit" value="Submit" />
-      </form>
+    <div className="contact">
+      <h2>Contact Us</h2>
+      <div className="form-container">
+        <form onSubmit={handleSubmit}>
+          <label>
+            Name:
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            Email:
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            Message:
+            <textarea
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+            />
+          </label>
+          <div className="submit-button-container">
+            <input draggable="false" type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,64 @@
+.contact {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+.contact h2 {
+  margin-bottom: 2rem;
+}
+.contact .form-container {
+  width: 100%;
+  max-width: 600px;
+}
+.contact .form-container form {
+  display: flex;
+  flex-direction: column;
+}
+.contact .form-container form label {
+  margin-bottom: 1rem;
+}
+.contact .form-container form label input,
+.contact .form-container form label textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+}
+.contact .form-container form label textarea {
+  resize: vertical;
+  max-height: 30vh;
+}
+.contact .form-container form .submit-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.contact .form-container form .submit-button-container input[type=submit] {
+  background-color: #343a40;
+  color: #f8f9fa;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  height: 35px;
+}
+.contact .form-container form .submit-button-container input[type=submit]:hover {
+  background-color: #495057;
+}
+@media (max-width: 768px) {
+  .contact {
+    padding: 1rem;
+  }
+  .contact .form-container form label input,
+  .contact .form-container form label textarea {
+    font-size: 0.9rem;
+  }
+  .contact .form-container form input[type=submit] {
+    font-size: 0.9rem;
+  }
+}/*# sourceMappingURL=contact.css.map */

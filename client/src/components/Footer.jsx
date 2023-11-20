@@ -9,12 +9,12 @@ function Footer() {
       {location.pathname === "/about" ||
       location.pathname === "/contact" ||
       location.pathname === "/request-fortune" ? (
-        <Link to="/" className="link">
+        <Link draggable="false" to="/" className="link">
           Home
         </Link>
       ) : (
         <>
-          <Link to="/about" className="link">
+          <Link draggable="false" to="/about" className="link">
             About
           </Link>
           <a
@@ -30,7 +30,7 @@ function Footer() {
               draggable="false"
             />
           </a>
-          <Link to="/contact" className="link">
+          <Link draggable="false" to="/contact" className="link">
             Contact Us
           </Link>
         </>
