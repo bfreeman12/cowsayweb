@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "dotenv": "^16.3.1",
     "react-kofi-button": "^0.7.1"
   }
 }
