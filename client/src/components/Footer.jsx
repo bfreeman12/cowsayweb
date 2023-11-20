@@ -6,7 +6,9 @@ function Footer() {
 
   return (
     <footer className="footer">
-      {location.pathname === "/about" || location.pathname === "/contact" ? (
+      {location.pathname === "/about" ||
+      location.pathname === "/contact" ||
+      location.pathname === "/request-fortune" ? (
         <Link to="/" className="link">
           Home
         </Link>

@@ -11,18 +11,20 @@
     gap: 1rem;
     padding: 2rem 2rem;
 
-    a {
+    .link {
       background-color: rgba(35, 33, 33, 0.836);
+      color: white;
+      text-decoration: none;
       border-radius: 5px;
       padding: 0.5rem 2rem;
       text-wrap: nowrap;
       user-select: none;
-    }
-    a:hover {
-      background-color: rgba(81, 80, 80, 0.305);
-    }
-    a:active {
-      background-color: rgba(20, 20, 20, 0.115);
+      &:hover {
+        background-color: rgba(81, 80, 80, 0.305);
+      }
+      &:active {
+        background-color: rgba(20, 20, 20, 0.115);
+      }
     }
   }
 }
