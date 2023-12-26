@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className="footer">
       {location.pathname === "/about" ||
-      location.pathname === "/contact" ||
+      location.pathname === "/email-us" ||
       location.pathname === "/request-fortune" ? (
         <Link draggable="false" to="/" className="link">
           Home
@@ -30,7 +30,7 @@ function Footer() {
               draggable="false"
             />
           </a>
-          <Link draggable="false" to="/contact" className="link">
+          <Link draggable="false" to="/email-us" className="link">
             Contact Us
           </Link>
         </>
