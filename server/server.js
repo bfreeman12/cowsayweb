@@ -7,7 +7,7 @@ const axios = require("axios");
 const app = express();
 const nodemailer = require("nodemailer");
 
-require("dotenv").config();
+require("dotenv").config({ path: "/tmp/server/.env" });
 
 const ip_address = process.env.CLIENT_IP;
 const client_port = process.env.CLIENT_PORT;

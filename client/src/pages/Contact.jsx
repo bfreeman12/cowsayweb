@@ -19,7 +19,7 @@ const ContactUs = () => {
     }
 
     axios
-      .post("http://192.168.178.125:3000/verify", { captchaValue })
+      .post("/verify", { captchaValue })
       .then((response) => {
         const { success } = response.data;
 
@@ -32,7 +32,7 @@ const ContactUs = () => {
         // If captcha verification is successful, submit the form
         if (name && email && message) {
           axios
-            .post("http://192.168.178.125:3000/contact", {
+            .post("/contact", {
               name,
               email,
               message,
